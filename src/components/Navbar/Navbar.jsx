@@ -51,7 +51,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src="/images/mostralogo-beyaz.png"
+                        src="/images/mostralogo-yesil.png"
                         alt="Team Mostra"
                         width={45}
                         height={45}

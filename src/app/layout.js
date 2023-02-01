@@ -20,6 +20,11 @@ export const metadata = {
   description: 'Team Mostra - Robotik, elektrikli araçlar ve otonom teknoloji alanlarında geleceği inşa eden bir takım. FRC 10396.',
   keywords: ['robotik', 'FRC', 'Team Mostra', 'elektrikli araç', 'otonom', 'FIRST Robotics'],
   authors: [{ name: 'Team Mostra' }],
+  icons: {
+    icon: '/images/mostralogo-yesil.png',
+    shortcut: '/images/mostralogo-yesil.png',
+    apple: '/images/mostralogo-yesil.png',
+  },
   openGraph: {
     title: 'Team Mostra | Robotik, Elektrikli Araçlar ve Otonom Teknoloji',
     description: 'Team Mostra - Robotik, elektrikli araçlar ve otonom teknoloji alanlarında geleceği inşa eden bir takım.',
