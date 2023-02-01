@@ -1,0 +1,296 @@
+.page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    text-align: center;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.label {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--clr-primary);
+    margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+}
+
+.highlight {
+    color: var(--clr-primary);
+}
+
+.hero p {
+    font-size: var(--font-size-lg);
+    color: var(--clr-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section */
+.section {
+    padding: var(--space-2xl) 0 var(--space-section);
+}
+
+/* Contact Grid */
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+    .contactGrid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+/* Form Card */
+.formCard {
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+}
+
+.formCard h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-xl);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+    .formRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.formGroup label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-text-secondary);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: var(--space-md);
+    background: var(--clr-bg-elevated);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    color: var(--clr-text-primary);
+    font-family: inherit;
+    font-size: var(--font-size-base);
+    transition: border-color var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: var(--clr-text-muted);
+}
+
+.formGroup select {
+    cursor: pointer;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    align-self: flex-start;
+}
+
+.submitBtn:hover {
+    background: var(--clr-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Social Card */
+.socialCard {
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+}
+
+.socialCard h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+.socialCard>p {
+    color: var(--clr-text-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.socialList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.socialItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--clr-bg-elevated);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.socialItem:hover {
+    border-color: var(--clr-primary);
+    background: rgba(76, 180, 131, 0.05);
+}
+
+.socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--clr-bg-card);
+    border-radius: var(--radius-md);
+    color: var(--clr-primary);
+}
+
+.socialInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.socialName {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-text-primary);
+}
+
+.socialHandle {
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-muted);
+}
+
+.arrow {
+    color: var(--clr-text-muted);
+    transition: all var(--transition-fast);
+}
+
+.socialItem:hover .arrow {
+    color: var(--clr-primary);
+    transform: translateX(4px);
+}
+
+/* Quick Links Section */
+.quickLinksSection {
+    padding: var(--space-section) 0;
+    background: var(--clr-bg-darker);
+}
+
+.quickLinksGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .quickLinksGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.quickLinkCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-2xl);
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-smooth);
+}
+
+.quickLinkCard:hover {
+    border-color: var(--clr-primary);
+    transform: translateY(-4px);
+}
+
+.quickLinkIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(76, 180, 131, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--clr-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.quickLinkCard h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.quickLinkCard p {
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-muted);
+}

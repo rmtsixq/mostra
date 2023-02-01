@@ -1,0 +1,310 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    padding: var(--space-md) 0;
+    transition: all var(--transition-smooth);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--clr-border);
+    padding: var(--space-sm) 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-lg);
+    color: var(--clr-text-primary);
+    transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+    opacity: 0.85;
+    color: var(--clr-text-primary);
+}
+
+.logoText {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .logoText {
+        display: block;
+    }
+}
+
+/* Navigation Links */
+.navLinks {
+    display: none;
+    list-style: none;
+    gap: var(--space-xs);
+}
+
+@media (min-width: 1024px) {
+    .navLinks {
+        display: flex;
+    }
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-text-secondary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+    color: var(--clr-text-primary);
+    background: var(--clr-bg-hover);
+}
+
+.chevron {
+    transition: transform var(--transition-fast);
+}
+
+.navItem:hover .chevron {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm);
+    box-shadow: var(--shadow-lg);
+    animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownLink {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-secondary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.dropdownLink:hover {
+    background: var(--clr-bg-hover);
+    color: var(--clr-primary);
+}
+
+/* CTA Group */
+.ctaGroup {
+    display: none;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+@media (min-width: 1024px) {
+    .ctaGroup {
+        display: flex;
+    }
+}
+
+.ctaOutline {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-text-secondary);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.ctaOutline:hover {
+    color: var(--clr-text-primary);
+    border-color: var(--clr-border-hover);
+    background: var(--clr-bg-hover);
+}
+
+.ctaPrimary {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.ctaPrimary:hover {
+    background: var(--clr-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--clr-bg-dark);
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .mobileMenuBtn {
+        display: none;
+    }
+}
+
+.hamburger {
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background: var(--clr-text-primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: var(--clr-text-primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    bottom: -7px;
+}
+
+.hamburger.open {
+    background: transparent;
+}
+
+.hamburger.open::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-bg-dark);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-smooth);
+    overflow-y: auto;
+}
+
+.mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobileNavLinks {
+    padding: var(--space-xl) var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.mobileNavItem {
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.mobileNavLink {
+    display: block;
+    padding: var(--space-md) 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-text-primary);
+}
+
+.mobileSubmenu {
+    padding-left: var(--space-lg);
+    padding-bottom: var(--space-md);
+}
+
+.mobileSubLink {
+    display: block;
+    padding: var(--space-sm) 0;
+    font-size: var(--font-size-base);
+    color: var(--clr-text-secondary);
+}
+
+.mobileSubLink:hover {
+    color: var(--clr-primary);
+}
+
+.mobileCta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--clr-border);
+}
+
+.mobileCta .ctaOutline,
+.mobileCta .ctaPrimary {
+    text-align: center;
+    padding: var(--space-md);
+}

@@ -1,0 +1,291 @@
+.page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    text-align: center;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.label {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--clr-primary);
+    margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+}
+
+.highlight {
+    color: var(--clr-primary);
+}
+
+.hero p {
+    font-size: var(--font-size-lg);
+    color: var(--clr-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section */
+.section {
+    padding: var(--space-2xl) 0 var(--space-section);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.sectionHeader h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-sm);
+}
+
+.sectionHeader p {
+    color: var(--clr-text-secondary);
+}
+
+/* Tiers Grid */
+.tiersGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .tiersGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tierCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-2xl);
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-smooth);
+}
+
+.tierCard:hover {
+    border-color: var(--clr-border-hover);
+    transform: translateY(-4px);
+}
+
+.tierCard.highlighted {
+    border-color: var(--clr-primary);
+    background: linear-gradient(180deg, rgba(76, 180, 131, 0.05) 0%, var(--clr-bg-card) 100%);
+}
+
+.popularBadge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--space-xs) var(--space-md);
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.tierCard h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-xs);
+}
+
+.tierDesc {
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+.benefitsList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    flex: 1;
+}
+
+.benefitsList li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-secondary);
+}
+
+.benefitsList li svg {
+    flex-shrink: 0;
+    color: var(--clr-primary);
+    margin-top: 2px;
+}
+
+.tierBtn {
+    display: block;
+    text-align: center;
+    padding: var(--space-md);
+    background: transparent;
+    color: var(--clr-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.tierBtn:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.highlighted .tierBtn {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-bg-dark);
+}
+
+.highlighted .tierBtn:hover {
+    background: var(--clr-primary-light);
+    color: var(--clr-bg-dark);
+}
+
+/* Ways Section */
+.waysSection {
+    padding: var(--space-section) 0;
+    background: var(--clr-bg-darker);
+}
+
+.waysGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .waysGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.wayCard {
+    text-align: center;
+    padding: var(--space-2xl);
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-smooth);
+}
+
+.wayCard:hover {
+    border-color: var(--clr-border-hover);
+    transform: translateY(-4px);
+}
+
+.wayIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(76, 180, 131, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--clr-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.wayCard h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.wayCard p {
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-muted);
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: var(--space-section) 0;
+}
+
+.ctaCard {
+    text-align: center;
+    padding: var(--space-3xl);
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+}
+
+.ctaCard h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+}
+
+.ctaCard p {
+    color: var(--clr-text-secondary);
+    max-width: 500px;
+    margin: 0 auto var(--space-xl);
+}
+
+.ctaButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.ctaPrimary {
+    padding: var(--space-md) var(--space-2xl);
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.ctaPrimary:hover {
+    background: var(--clr-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--clr-bg-dark);
+}
+
+.ctaSecondary {
+    padding: var(--space-md) var(--space-2xl);
+    background: transparent;
+    color: var(--clr-text-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.ctaSecondary:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}

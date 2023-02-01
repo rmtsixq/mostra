@@ -1,0 +1,249 @@
+.page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--space-4xl) 0 var(--space-2xl);
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-secondary);
+    margin-bottom: var(--space-lg);
+    transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+    color: var(--clr-primary);
+}
+
+.label {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--clr-primary);
+    margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+}
+
+.highlight {
+    color: var(--clr-primary);
+}
+
+.hero p {
+    font-size: var(--font-size-lg);
+    color: var(--clr-text-secondary);
+    max-width: 600px;
+}
+
+/* Achievements Section */
+.achievementsSection {
+    padding: var(--space-2xl) 0;
+    background: var(--clr-bg-darker);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.achievementsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .achievementsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.achievementCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.achievementIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(76, 180, 131, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--clr-primary);
+    margin-bottom: var(--space-md);
+}
+
+.achievementCard h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.achievementYear {
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-muted);
+}
+
+/* Section */
+.section {
+    padding: var(--space-section) 0;
+}
+
+.sectionHeader {
+    margin-bottom: var(--space-2xl);
+}
+
+.sectionHeader h2 {
+    font-size: var(--font-size-3xl);
+}
+
+/* Season Card */
+.seasonCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    padding: var(--space-2xl);
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .seasonCard {
+        grid-template-columns: 400px 1fr;
+    }
+}
+
+.seasonImage {
+    position: relative;
+    height: 300px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.seasonContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.seasonHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.seasonYear {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--clr-primary);
+}
+
+.seasonName {
+    font-size: var(--font-size-lg);
+    color: var(--clr-text-secondary);
+}
+
+.achievement {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(76, 180, 131, 0.15);
+    color: var(--clr-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-full);
+    width: fit-content;
+    margin-bottom: var(--space-md);
+}
+
+.seasonContent>p {
+    color: var(--clr-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.highlights {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.highlights li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--clr-text-secondary);
+}
+
+.highlights li svg {
+    color: var(--clr-primary);
+    flex-shrink: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: var(--space-section) 0;
+    background: var(--clr-bg-darker);
+}
+
+.ctaCard {
+    text-align: center;
+    padding: var(--space-3xl);
+    background: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+}
+
+.ctaCard h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+.ctaCard p {
+    color: var(--clr-text-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.ctaButton {
+    display: inline-flex;
+    padding: var(--space-md) var(--space-2xl);
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-smooth);
+}
+
+.ctaButton:hover {
+    background: var(--clr-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--clr-bg-dark);
+}
