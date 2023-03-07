@@ -17,6 +17,20 @@ export default function SectionApplications() {
       )
     },
     {
+      id: 'university-apply',
+      title: 'Mostra Başvuru Formu (Üniversite)',
+      subtitle: 'Team Mostra ile tanışın!',
+      description: 'Team Mostra; Mostra-Üniversite, Mostra-Lise , Mostra-İş Geliştirme , Mostra AI ve Mostra Sosyal alt ekiplerinden oluşan bir teknoloji takımıdır. Mostra takımı, 2024 sezonu itibariyle çalışmalarını İstanbul Teknik Üniversitesi’nde yer alan Mostra Teknoloji Merkezi\'nde yürütmektedir.',
+      label: 'BAŞVURUYA AÇIK',
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSfRr1zM9QGhwfR9CrP_abufmZMB3YapuHQUQqrRD73VslZbPg/viewform',
+      icon: (
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M12 8v4M12 16h.01" />
+        </svg>
+      )
+    },
+    {
       id: 'mun',
       title: 'Mostra MUN 2026',
       subtitle: 'Küresel Sorunlara Yerel Çözümler',

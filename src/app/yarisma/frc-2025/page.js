@@ -8,10 +8,10 @@ export const metadata = {
 };
 
 const timeline = [
-    { date: 'Ocak 2025', title: 'Kickoff', description: 'Sezon başlangıcı ve oyun tanıtımı' },
-    { date: 'Ocak-Şubat', title: 'Build Season', description: '6 haftalık robot tasarım ve üretim süreci' },
-    { date: 'Mart 2025', title: 'Regional', description: 'Bölgesel yarışmalar' },
-    { date: 'Nisan 2025', title: 'World Championship', description: 'Houston, ABD - Dünya Şampiyonası' },
+    { date: 'Ocak 2025', title: 'Kickoff', description: 'Sezon başlangıcı ve "Reefscape" oyun tanıtımı' },
+    { date: 'Ocak-Şubat', title: 'Build Season', description: 'Yoğun robot tasarım ve üretim süreci' },
+    { date: 'Mart 2025', title: 'Haliç Regional', description: 'İstanbul - Bölgesel Yarışma Deneyimi' },
+    { date: 'Off-Season', title: 'Şampiyonluklar', description: 'Ümraniye Winner & Başakşehir Industrial Design' },
 ];
 
 const robotSpecs = [
@@ -49,7 +49,7 @@ export default function FRC2025Page() {
                     </div>
                     <h1>FRC <span className={styles.highlight}>2025</span></h1>
                     <p>
-                        Yeni sezon, yeni hedefler. FIRST Robotics Competition 2025 için hazırız.
+                        Unutulmaz bir sezon, gurur verici başarılar. FIRST Robotics Competition 2025 sezonunu zaferlerle tamamladık.
                     </p>
                 </div>
             </section>
@@ -62,9 +62,9 @@ export default function FRC2025Page() {
                             <span className={styles.label}>2025 Robotu</span>
                             <h2>Tasarım ve <span className={styles.highlight}>Özellikler</span></h2>
                             <p>
-                                2025 sezonu için geliştirdiğimiz robot, önceki sezonlardan edindiğimiz
-                                deneyimler ışığında tasarlandı. Swerve drive sistemi ile yüksek manevra
-                                kabiliyeti, güçlü toplama ve atma mekanizmalarıyla rekabetçi bir yapıya sahip.
+                                2025 sezonu robotumuz, mühendislik ekibimizin aylar süren çalışması sonucu hayat buldu.
+                                Swerve drive sistemi ile sahada üstün hareket kabiliyeti sergileyen robotumuz,
+                                verimli mekanizmaları sayesinde Off-Season turnuvalarında bize şampiyonluk getirdi.
                             </p>
                             <div className={styles.specsGrid}>
                                 {robotSpecs.map((spec, idx) => (
@@ -112,7 +112,7 @@ export default function FRC2025Page() {
                 <div className={styles.container}>
                     <div className={styles.sectionHeader}>
                         <span className={styles.label}>Sezon Takvimi</span>
-                        <h2>2025 Yol Haritası</h2>
+                        <h2>2025 Sezon Yolculuğumuz</h2>
                     </div>
                     <div className={styles.timeline}>
                         {timeline.map((item, idx) => (
