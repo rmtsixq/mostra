@@ -9,10 +9,10 @@ export const metadata = {
 
 const projects = [
     {
-        id: 'frc-robot-2026',
-        title: 'FRC Robot 2026',
+        id: 'frc-robot-2025',
+        title: 'FRC Robot 2025',
         category: 'Robotik',
-        description: 'FIRST Robotics Competition 2026 sezonu için geliştirdiğimiz yarışma robotu.',
+        description: 'FIRST Robotics Competition 2025 sezonu için geliştirdiğimiz yarışma robotu.',
         image: '/images/very_cool_pic_of_the_frc_robot_with_5_people_from_little_bit_up.jpeg',
         technologies: ['Mekanik', 'Elektronik', 'Yazılım', 'CAD'],
         featured: true,
@@ -20,51 +20,34 @@ const projects = [
     {
         id: 'elektrikli-arac',
         title: 'Elektrikli Araç Projesi',
-        category: 'Elektrikli Araçlar',
+        category: 'Sürdürülebilirlik',
         description: 'TÜBİTAK Efficiency Challenge için geliştirilen enerji verimli elektrikli araç.',
         image: '/images/full_car_view_from_front_with_5_people_looking.jpeg',
         technologies: ['Elektrik Motorları', 'Batarya Sistemleri', 'Aerodinamik'],
         featured: true,
     },
-    {
-        id: 'frc-robot-closeup',
-        title: 'FRC Mekanik Sistemler',
-        category: 'Robotik',
-        description: 'Robot alt sistemleri: toplama, atma, tırmanma mekanizmaları.',
-        image: '/images/frc_robot_close_up.jpeg',
-        technologies: ['Mekanik Tasarım', '3D Baskı', 'CNC'],
-        featured: false,
-    },
-    {
-        id: 'roboquest',
-        title: 'RoboQuest: Robotun Serüvenleri',
-        category: 'Yazılım',
-        description: 'Çocuklara robotik öğretmeyi amaçlayan eğitici oyun projesi.',
-        image: '/images/roboquest.png',
-        technologies: ['Game Development', 'Eğitim Teknolojileri'],
-        featured: false,
-    },
-    {
-        id: 'rehberai',
-        title: 'RehberAI',
-        category: 'Yapay Zeka',
-        description: 'Yaşlılara yönelik sesli ve yazılı yapay zeka asistan uygulaması.',
-        image: '/images/rehberai.png',
-        technologies: ['AI/ML', 'NLP', 'Voice Recognition'],
-        featured: false,
-    },
-    {
-        id: 'mostra-ai',
-        title: 'Mostra AI',
-        category: 'Yapay Zeka',
-        description: 'Team Mostra için geliştirilen yapay zeka asistan.',
-        image: '/images/mostra_ai.png',
-        technologies: ['LLM', 'RAG', 'Chatbot'],
-        featured: false,
-    },
 ];
 
-const categories = ['Tümü', 'Robotik', 'Elektrikli Araçlar', 'Yapay Zeka', 'Yazılım'];
+const otherActivities = [
+    { title: 'Eğitici Kit Projesi (Matkap Kiti & Filament Makinesi)', category: 'Eğitim' },
+    { title: 'Toplumsal Etki (Engelsiz Mostra & LÖSEV)', category: 'Sosyal Sorumluluk' },
+    { title: 'Zeytinburnu FLL & Tanzanya FTC Mentörlüğü', category: 'Mentörlük' },
+    { title: 'Gençlik Merkezlerinde STEM Eğitimleri', category: 'Eğitim' },
+    { title: 'Okullarla Atölye Çalışmaları (3 Ortaokul)', category: 'Eğitim' },
+    { title: 'Mostra Topluluk & Sosyal Girişimleri', category: 'Topluluk' },
+    { title: 'Teknoloji Zirvesi Organizasyonu', category: 'Etkinlik' },
+    { title: 'ADHD Blog & Bilim Dergisi Yayını', category: 'Dijital' },
+    { title: 'Podcast: Teknoloji ve Gelecek', category: 'Medya' },
+    { title: 'Mostra 2D Mobil Oyun Geliştirme', category: 'Yazılım' },
+    { title: 'Yaşlılar için Yapay Zeka Uygulaması', category: 'Yazılım' },
+    { title: 'Firsthub Platform Geliştirme', category: 'Dijital' },
+    { title: 'Üsküdar Bilim Merkezi Sergisi', category: 'Etkinlik' },
+    { title: 'Kadın Mühendis Röportaj Serisi', category: 'Sosyal Sorumluluk' },
+    { title: 'YouTube Shorts: 3D Yazdırılabilir Aletler', category: 'Medya' },
+    { title: 'Çantada Teknik Eğitim Serisi', category: 'Eğitim' },
+];
+
+const categories = ['Tümü', 'Robotik', 'Yazılım', 'Eğitim', 'Sosyal Sorumluluk', 'Dijital', 'Etkinlik'];
 
 export default function ProjelerPage() {
     return (
@@ -110,28 +93,15 @@ export default function ProjelerPage() {
                         ))}
                     </div>
 
-                    {/* Regular Projects */}
-                    <h3 className={styles.sectionTitle}>Diğer Projeler</h3>
-                    <div className={styles.projectsGrid}>
-                        {projects.filter(p => !p.featured).map((project) => (
-                            <div key={project.id} className={styles.projectCard}>
-                                <div className={styles.projectImage}>
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        fill
-                                        className={styles.image}
-                                    />
-                                </div>
-                                <div className={styles.projectContent}>
-                                    <span className={styles.cardCategory}>{project.category}</span>
-                                    <h4>{project.title}</h4>
-                                    <p>{project.description}</p>
-                                    <div className={styles.techTags}>
-                                        {project.technologies.slice(0, 2).map((tech) => (
-                                            <span key={tech} className={styles.tagSmall}>{tech}</span>
-                                        ))}
-                                    </div>
+                    {/* Detailed List for Projects without Images */}
+                    <h3 className={styles.sectionTitle}>Diğer Çalışmalar ve Girişimler</h3>
+                    <div className={styles.otherActivitiesGrid}>
+                        {otherActivities.map((activity, idx) => (
+                            <div key={idx} className={styles.activityItem}>
+                                <div className={styles.activityDot}></div>
+                                <div className={styles.activityContent}>
+                                    <span className={styles.activityCategory}>{activity.category}</span>
+                                    <h4>{activity.title}</h4>
                                 </div>
                             </div>
                         ))}

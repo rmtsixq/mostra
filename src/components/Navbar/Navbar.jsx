@@ -12,7 +12,7 @@ const navLinks = [
         name: 'Yarışmalar',
         href: '/yarisma',
         subLinks: [
-            { name: 'FRC 2026', href: '/yarisma/frc-2026' },
+            { name: 'FRC 2025', href: '/yarisma/frc-2025' },
             { name: 'Önceki Sezonlar', href: '/yarisma/onceki-sezonlar' },
             { name: 'Diğer Yarışmalar', href: '/yarisma/diger' },
         ]

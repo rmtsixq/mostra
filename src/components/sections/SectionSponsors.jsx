@@ -2,12 +2,11 @@ import styles from './SectionSponsors.module.css';
 
 // Placeholder sponsors - replace with actual sponsor data
 const sponsors = [
-    { name: 'Sponsor 1', tier: 'gold' },
-    { name: 'Sponsor 2', tier: 'gold' },
-    { name: 'Sponsor 3', tier: 'silver' },
-    { name: 'Sponsor 4', tier: 'silver' },
-    { name: 'Sponsor 5', tier: 'bronze' },
-    { name: 'Sponsor 6', tier: 'bronze' },
+    { name: 'Uyumsoft', logo: '/images/sponsors/uyumsoft.png', tier: 'gold' },
+    { name: 'İTÜ', logo: '/images/sponsors/itu.png', tier: 'gold' },
+    { name: 'İstanbul İl MEM', logo: '/images/sponsors/meb.jpg', tier: 'silver' },
+    { name: 'Mapin', logo: '/images/sponsors/mapin.png', tier: 'silver' },
+    { name: 'ByNoGame', logo: '/images/sponsors/bynogame.jpg', tier: 'bronze' },
 ];
 
 export default function SectionSponsors() {
@@ -32,7 +31,13 @@ export default function SectionSponsors() {
                             className={`${styles.sponsorCard} ${styles[sponsor.tier]}`}
                         >
                             <div className={styles.sponsorLogo}>
-                                <span>{sponsor.name}</span>
+                                <div className={styles.logoWrapper}>
+                                    <img
+                                        src={sponsor.logo}
+                                        alt={sponsor.name}
+                                        className={styles.image}
+                                    />
+                                </div>
                             </div>
                         </div>
                     ))}

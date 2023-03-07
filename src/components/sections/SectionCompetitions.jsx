@@ -4,10 +4,10 @@ import styles from './SectionCompetitions.module.css';
 
 const competitions = [
     {
-        name: 'FRC 2026',
+        name: 'FRC 2025',
         description: 'FIRST Robotics Competition - Takım 10396',
         image: '/images/very_cool_pic_of_the_frc_robot_with_5_people_from_little_bit_up.jpeg',
-        href: '/yarisma/frc-2026',
+        href: '/yarisma/frc-2025',
         featured: true,
     },
     {

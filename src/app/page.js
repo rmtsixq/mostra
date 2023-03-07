@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import { SectionWorkshop, SectionCompetitions, SectionSponsors } from '@/components/sections';
+import { SectionWorkshop, SectionCompetitions, SectionSponsors, SectionApplications } from '@/components/sections';
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
         primaryCta={{ text: "Projelerimiz", href: "/projeler" }}
         secondaryCta={{ text: "Bizi Tanıyın", href: "/hakkimizda" }}
       />
+      <SectionApplications />
       <SectionWorkshop />
       <SectionCompetitions />
       <SectionSponsors />

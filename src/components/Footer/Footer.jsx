@@ -17,7 +17,7 @@ const footerLinks = {
     ],
     projeler: [
         { name: 'Tüm Projeler', href: '/projeler' },
-        { name: 'FRC 2026', href: '/yarisma/frc-2026' },
+        { name: 'FRC 2025', href: '/yarisma/frc-2025' },
         { name: 'Elektrikli Araç', href: '/projeler/elektrikli-arac' },
     ],
     kaynaklar: [

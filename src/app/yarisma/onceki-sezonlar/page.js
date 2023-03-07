@@ -11,10 +11,12 @@ const seasons = [
     {
         year: '2025',
         name: 'REEFSCAPE',
-        achievement: 'Rookie All-Star Adayı',
+        achievement: '',
         description: 'İlk FRC sezonumuz. Regional\'da büyük deneyim kazandık.',
         image: '/images/frc_team_photo.jpeg',
         highlights: [
+            'Ümraniye Off-Season Şampiyonluğu',
+            'Başakşehir Industrial Design Ödülü',
             'İlk robot tasarımımız',
             '6 haftalık yoğun build season',
             'Regional katılımı',
@@ -27,12 +29,30 @@ const achievements = [
     {
         icon: (
             <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="8" r="7" />
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
         ),
-        title: 'Rookie All-Star Adayı',
-        year: '2025',
+        title: 'Ümraniye Off-Season Şampiyonu',
+        year: '2024',
+    },
+    {
+        icon: (
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+        ),
+        title: 'Başakşehir Industrial Design',
+        year: '2024',
+    },
+    {
+        icon: (
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg>
+        ),
+        title: 'FRC 10396 Team Mostra',
+        year: '2024',
     },
     {
         icon: (
@@ -135,10 +155,10 @@ export default function OncekiSezonlarPage() {
             <section className={styles.ctaSection}>
                 <div className={styles.container}>
                     <div className={styles.ctaCard}>
-                        <h2>2026 Sezonu Başlıyor!</h2>
-                        <p>Yeni sezon hazırlıklarımızı takip edin.</p>
-                        <Link href="/yarisma/frc-2026" className={styles.ctaButton}>
-                            FRC 2026'yı İncele
+                        <h2>2025 Sezonu Yayında!</h2>
+                        <p>Yeni sezon hazırlıklarımızı ve robotumuzu inceleyin.</p>
+                        <Link href="/yarisma/frc-2025" className={styles.ctaButton}>
+                            FRC 2025'i İncele
                         </Link>
                     </div>
                 </div>

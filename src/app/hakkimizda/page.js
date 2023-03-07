@@ -53,7 +53,8 @@ const stats = [
     { number: '10396', label: 'FRC Takım Numarası' },
     { number: '50+', label: 'Aktif Üye' },
     { number: '10+', label: 'Proje' },
-    { number: '6', label: 'Dilde Podcast' },
+    { number: '2', label: 'Off-Season Ödülü' },
+    { number: '5+', label: 'Farklı Yarışma' },
 ];
 
 export default function HakkimizdaPage() {
@@ -94,14 +95,15 @@ export default function HakkimizdaPage() {
                                 topluma katkı sağlamaktı.
                             </p>
                             <p>
-                                Bugün, FRC 10396 takım numarasıyla FIRST Robotics Competition'da Türkiye'yi temsil
-                                ediyoruz. Elektrikli araç projelerimiz, eğitim içeriklerimiz ve sosyal sorumluluk
-                                projelerimizle büyümeye devam ediyoruz.
+                                FRC 10396 takımı olarak Ümraniye Off-Season Şampiyonluğu ve Başakşehir Off-Season
+                                Endüstriyel Tasarım Ödülü ile sezona damga vurduk. Zeytinburnu FLL ve Tanzanya FTC
+                                mentörlüklerimiz, eğitim içeriklerimiz ve sosyal sorumluluk projelerimizle büyümeye
+                                devam ediyoruz.
                             </p>
                             <p>
                                 Atölyemizde sadece robot yapmıyoruz – liderlik, iletişim ve problem çözme becerilerini
-                                geliştiriyoruz. Her üyemiz, teknik bilginin yanı sıra ekip çalışması ve proje yönetimi
-                                konularında da deneyim kazanıyor.
+                                geliştiriyoruz. Engelsiz Mostra ve kit projelerimizle teknolojiyi toplumun her kesimine
+                                ulaştırıyoruz.
                             </p>
                         </div>
                         <div className={styles.storyImages}>

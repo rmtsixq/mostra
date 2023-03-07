@@ -23,7 +23,7 @@ const competitions = [
     },
     {
         id: 'efficiency-challenge',
-        name: 'TÜBİTAK Efficiency Challenge',
+        name: 'Teknofest Efficiency Challenge',
         shortName: 'Elektrikli Araç',
         description: 'Enerji verimli elektrikli araç yarışması.',
         image: '/images/full_car_view_from_front_with_5_people_looking.jpeg',
@@ -38,9 +38,9 @@ const competitions = [
 
 const pastSeasons = [
     {
-        year: '2025',
-        competition: 'FRC 2025',
-        achievement: 'Rookie All-Star Adayı',
+        year: '2024',
+        competition: 'FRC 2024 (Off-Season)',
+        achievement: 'Ümraniye Winner & Başakşehir Industrial Design',
         image: '/images/frc_team_photo.jpeg',
     },
 ];

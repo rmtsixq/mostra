@@ -10,7 +10,7 @@ export const metadata = {
 const competitions = [
     {
         id: 'efficiency-challenge',
-        name: 'TÜBİTAK Efficiency Challenge',
+        name: 'Teknofest Efficiency Challenge',
         category: 'Elektrikli Araç',
         description: 'Enerji verimli elektrikli araç tasarımı ve yarışması. Takımımız her yıl bu yarışmada yer almaktadır.',
         image: '/images/full_car_view_from_front_with_5_people_looking.jpeg',
@@ -18,22 +18,29 @@ const competitions = [
         status: 'Aktif',
     },
     {
-        id: 'teknofest',
-        name: 'TEKNOFEST',
-        category: 'Teknoloji',
-        description: 'Türkiye\'nin en büyük havacılık, uzay ve teknoloji festivali kapsamındaki yarışmalar.',
-        image: '/images/crowded_area_with_frc_team_with_some_mechanics_.jpeg',
-        achievements: ['Finalist'],
+        id: 'robotaksi',
+        name: 'Teknofest Robotaksi Binek Otonom Araç Yarışması',
+        category: 'Otonom Sistemler',
+        description: 'Tam otonom sürüş algoritmaları ve araç kontrol sistemleri geliştirdiğimiz zorlu bir parkur yarışı.',
+        image: '/images/car_photo_with_two_people_working_On.jpeg',
+        achievements: [],
         status: 'Aktif',
     },
     {
-        id: 'shell-eco',
-        name: 'Shell Eco-Marathon',
-        category: 'Enerji Verimliliği',
-        description: 'Dünya genelinde düzenlenen enerji verimli araç yarışması.',
-        image: '/images/car_view_from_side_with_4_people_workking_on.jpeg',
+        id: 'robots-battle-league',
+        name: 'Türkiye Robots Battle League',
+        category: 'Robotik',
+        description: 'Yüksek mühendislik ve strateji gerektiren savaş robotları ligi.',
         achievements: [],
-        status: 'Planlanan',
+        status: 'Aktif',
+    },
+    {
+        id: 'entrepreneurship',
+        name: 'Teknofest Girişimcilik Yarışması',
+        category: 'Girişimcilik',
+        description: 'Teknolojik projelerimizi iş modellerine dönüştürdüğümüz ve ticarileşme potansiyelini ölçtüğümüz yarışma.',
+        achievements: [],
+        status: 'Aktif',
     },
 ];
 
@@ -73,17 +80,19 @@ export default function DigerYarismalarPage() {
                     <div className={styles.competitionsGrid}>
                         {competitions.map((comp) => (
                             <div key={comp.id} className={styles.competitionCard}>
-                                <div className={styles.cardImage}>
-                                    <Image
-                                        src={comp.image}
-                                        alt={comp.name}
-                                        fill
-                                        className={styles.image}
-                                    />
-                                    <span className={`${styles.statusBadge} ${styles[comp.status.toLowerCase()]}`}>
-                                        {comp.status}
-                                    </span>
-                                </div>
+                                {comp.image && (
+                                    <div className={styles.cardImage}>
+                                        <Image
+                                            src={comp.image}
+                                            alt={comp.name}
+                                            fill
+                                            className={styles.image}
+                                        />
+                                        <span className={`${styles.statusBadge} ${styles[comp.status.toLowerCase()]}`}>
+                                            {comp.status}
+                                        </span>
+                                    </div>
+                                )}
                                 <div className={styles.cardContent}>
                                     <span className={styles.category}>{comp.category}</span>
                                     <h3>{comp.name}</h3>
