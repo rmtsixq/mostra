@@ -49,6 +49,7 @@ const competitions = [
         name: 'Bosch Future Mobility Challenge',
         category: 'Otonom Sistemler',
         description: 'Otonom sürüş algoritmaları ve akıllı ulaşım sistemleri geliştirdiğimiz uluslararası bir yarışma.',
+        image: '/images/bosch_challenge.jpeg',
         achievements: [],
         status: 'Aktif',
     },
