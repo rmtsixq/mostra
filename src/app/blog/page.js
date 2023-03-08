@@ -25,7 +25,7 @@ export default function BlogPage() {
                 <div className={styles.container}>
                     <div className={styles.embedContainer}>
                         <iframe
-                            src="https://drive.google.com/file/d/1q5xsBcDDWQujuoAsLXdebPn9kMfc9ocu/preview"
+                            src="https://drive.google.com/file/d/1gL329Sqti5lfYhdjz965emU3vbjQ2DnG/preview"
                             width="100%"
                             height="800"
                             allow="autoplay"
@@ -34,7 +34,7 @@ export default function BlogPage() {
                     </div>
                     <div className={styles.externalLink}>
                         <a
-                            href="https://drive.google.com/file/d/1q5xsBcDDWQujuoAsLXdebPn9kMfc9ocu/view?usp=drive_link"
+                            href="https://drive.google.com/file/d/1gL329Sqti5lfYhdjz965emU3vbjQ2DnG/view?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.driveBtn}

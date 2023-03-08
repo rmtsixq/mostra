@@ -22,7 +22,7 @@ const competitions = [
         name: 'Teknofest Robotaksi Binek Otonom Araç Yarışması',
         category: 'Otonom Sistemler',
         description: 'Tam otonom sürüş algoritmaları ve araç kontrol sistemleri geliştirdiğimiz zorlu bir parkur yarışı.',
-        image: '/images/car_photo_with_two_people_working_On.jpeg',
+        image: '/images/robotaksi_new.jpg',
         achievements: [],
         status: 'Aktif',
     },

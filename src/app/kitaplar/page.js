@@ -11,9 +11,15 @@ const books = [
         id: 'mucit-kaplumbaga-tr',
         title: 'Mucit Kaplumbağa ve Serüvenleri',
         language: 'Türkçe',
-        description: 'Çocuklara robotik ve teknoloji sevgisi aşılamak için hazırladığımız hikaye kitabı.',
-        pdfUrl: 'https://6500d809762a4dbb96ec0589df6d9d33.elf.site/',
+        description: 'Çocuklara robotik ve teknoloji sevgisi aşılamak için hazırladığımız hikaye kitabı serisi.',
         featured: true,
+        series: [
+            { name: 'Seri 1 - Mucit Kaplumbağa', pdfUrl: 'https://6500d809762a4dbb96ec0589df6d9d33.elf.site/' },
+            { name: 'Seri 2 - Kaybolan Mercanlar', pdfUrl: 'https://drive.google.com/file/d/1IE1X0E8WBr_HNgavxnQmji0dzfh-Yw0B/view?usp=sharing' },
+            { name: 'Seri 3 - Ormanda Kaybolan Yol', pdfUrl: 'https://drive.google.com/file/d/1hKokJV3UXwcQRZieYjmyiXqPzx_uEm7g/view?usp=drive_link' },
+            { name: 'Seri 4 - Deredeki Sorunun Çözümü', pdfUrl: 'https://drive.google.com/file/d/1ycKNf_pcHVbd-D9qqSQahu6uEqXbCYad/view?usp=drive_link' },
+            { name: 'Seri 5 - Kayıp Ateş Böcekleri', pdfUrl: 'https://drive.google.com/file/d/1BAt4g-Ph0taTQE8JbFNXHuqpiUgh6Zp9/view?usp=drive_link' }
+        ]
     },
     {
         id: 'inventor-tortoise-en',
@@ -35,7 +41,7 @@ const books = [
         id: 'tartaruga-inventora-pt',
         title: 'A Tartaruga Inventora e suas Aventuras',
         language: 'Português',
-        description: 'Um livro de histórias para inspirar crianças sobre robótica.',
+        description: 'Um livre de histórias para inspirar crianças sobre robótica.',
         pdfUrl: 'https://c6bba7902c95439a8cedc289032bec16.elf.site/',
         featured: false,
     },
@@ -88,14 +94,13 @@ export default function KitaplarPage() {
                 <div className={styles.container}>
                     <div className={styles.featuredCard}>
                         <div className={styles.featuredImage}>
-                            <div className={styles.bookCover}>
+                            <div className={styles.bookCoverImage}>
                                 <Image
-                                    src="/images/mostralogo-yesil.png"
+                                    src="/images/mucit_kaplumbaga_cover.png"
                                     alt={featuredBook.title}
-                                    width={120}
-                                    height={120}
+                                    fill
+                                    className={styles.actualCover}
                                 />
-                                <span className={styles.bookTitle}>{featuredBook.title}</span>
                             </div>
                         </div>
                         <div className={styles.featuredContent}>
@@ -103,17 +108,37 @@ export default function KitaplarPage() {
                             <h2>{featuredBook.title}</h2>
                             <span className={styles.language}>{featuredBook.language}</span>
                             <p>{featuredBook.description}</p>
-                            <a
-                                href={featuredBook.pdfUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.readBtn}
-                            >
-                                Şimdi Oku
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
-                                </svg>
-                            </a>
+
+                            {featuredBook.series ? (
+                                <div className={styles.seriesGrid}>
+                                    {featuredBook.series.map((item, index) => (
+                                        <a
+                                            key={index}
+                                            href={item.pdfUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.seriesBtn}
+                                        >
+                                            <span>{item.name}</span>
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+                                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                            </svg>
+                                        </a>
+                                    ))}
+                                </div>
+                            ) : (
+                                <a
+                                    href={featuredBook.pdfUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.readBtn}
+                                >
+                                    Şimdi Oku
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

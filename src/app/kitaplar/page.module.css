@@ -70,23 +70,24 @@
     justify-content: center;
 }
 
-.bookCover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-2xl);
-    background: linear-gradient(135deg, var(--clr-bg-elevated) 0%, var(--clr-bg-dark) 100%);
+.bookCoverImage {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 3/4;
+    background: var(--clr-bg-elevated);
     border: 1px solid var(--clr-border);
     border-radius: var(--radius-lg);
-    text-align: center;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
 }
 
-.bookTitle {
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    color: var(--clr-text-primary);
-    max-width: 150px;
+.actualCover {
+    object-fit: cover;
+    transition: transform var(--transition-smooth);
+}
+
+.bookCoverImage:hover .actualCover {
+    transform: scale(1.05);
 }
 
 .featuredContent {
@@ -142,6 +143,50 @@
     transform: translateY(-2px);
     box-shadow: var(--shadow-glow);
     color: var(--clr-bg-dark);
+}
+
+.seriesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+@media (min-width: 640px) {
+    .seriesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.seriesBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(76, 180, 131, 0.1);
+    border: 1px solid rgba(76, 180, 131, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--clr-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-smooth);
+}
+
+.seriesBtn:hover {
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    border-color: var(--clr-primary);
+    transform: translateY(-2px);
+}
+
+.seriesBtn svg {
+    opacity: 0.6;
+    transition: all var(--transition-smooth);
+}
+
+.seriesBtn:hover svg {
+    opacity: 1;
+    transform: translate(2px, -2px);
 }
 
 /* Section */
