@@ -66,6 +66,12 @@
     }
 }
 
+@media (min-width: 1280px) {
+    .featuredGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .featuredCard {
     position: relative;
     border-radius: var(--radius-xl);
@@ -125,6 +131,37 @@
     font-size: var(--font-size-base);
     color: var(--clr-text-secondary);
     margin-bottom: var(--space-md);
+}
+
+.projectLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+    padding: var(--space-sm) var(--space-xl);
+    background: rgba(76, 180, 131, 0.1);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-smooth);
+    text-decoration: none;
+}
+
+.projectLink:hover {
+    background: var(--clr-primary);
+    color: var(--clr-bg-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.projectLink svg {
+    transition: transform var(--transition-smooth);
+}
+
+.projectLink:hover svg {
+    transform: scale(1.1);
 }
 
 .techTags {
@@ -318,6 +355,7 @@
     box-shadow: var(--shadow-glow);
     color: var(--clr-bg-dark);
 }
+
 /* Proof Files Section */
 .proofSection {
     padding: var(--space-2xl) 0;
@@ -397,4 +435,3 @@
 .proofButton:hover svg {
     transform: scale(1.1);
 }
-
